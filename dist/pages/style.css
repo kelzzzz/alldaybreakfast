@@ -1,0 +1,78 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+body {
+  background-color: rgb(0, 0, 0);
+  color: rgb(202, 35, 35);
+  font-family: 'Lucida Console';
+  text-shadow: 0 0 5px #ff0000;
+  letter-spacing: 2.5px;
+    font-size: small;
+}
+
+.terminal-input {
+  animation: slow-caret 2s infinite;
+  background-color: rgb(0, 0, 0);
+  color:rgb(202, 35, 35);
+  text-shadow: 0 0 5px #ff0000;
+  resize: none;
+  font-size: large;
+  border: none;
+  outline: none;
+}
+.ascii-art {
+    font-family: monospace;
+    white-space: pre;
+}
+.about{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+}
+.buttons{
+  width: 27%;
+  align-items: center;
+  text-align: center;
+}
+.response-read {
+  background-color: rgb(0, 0, 0);
+  color:rgb(202, 35, 35);
+  text-shadow: 0 0 5px #ff0000;
+  letter-spacing: 2.5px;
+  resize: none;
+  font-size: large;
+  border: none;
+  outline: none;
+
+  /*Animation stuff*/
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes slow-caret {
+  0%,
+  50% {
+    caret-color: #e00000;
+  }
+  75%,
+  100% {
+    caret-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color:rgb(202, 35, 35); }
+}
