@@ -16,7 +16,7 @@ document.addEventListener('keydown', (e) => {
 
   const input = acceptCommand();
 
-  if (isRecognizedCommand(input)) {
+  if (isUnrecognizedCommand(input)) {
     serveUnrecognizedCommand();
   } else {
     serveCommand(input);
@@ -31,7 +31,7 @@ function resetTypingAnimation() {
     response.style.animation = null;
 }
 
-function isRecognizedCommand(input) {
+function isUnrecognizedCommand(input) {
     return !COMMANDS[input];
 }
 
