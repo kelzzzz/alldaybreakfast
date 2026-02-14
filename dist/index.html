@@ -9,35 +9,64 @@
   </head>
   <body>
 
-    <pre class="ascii-art">
-   _   _ _    ___              ___                _     __           _   
-  /_\ | | |  /   \__ _ _   _  / __\_ __ ___  __ _| | __/ _| __ _ ___| |_ 
- //_\\| | | / /\ / _` | | | |/__\// '__/ _ \/ _` | |/ / |_ / _` / __| __|
-/  _  \ | |/ /_// (_| | |_| / \/  \ | |  __/ (_| |   <|  _| (_| \__ \ |_ 
-\_/ \_/_|_/___,' \__,_|\__, \_____/_|  \___|\__,_|_|\_\_|  \__,_|___/\__|
-                       |___/                                                                                                                            
-    </pre>
-    <div class="buttons">
-      <p><img src="stamps/b_6.gif"></img><img src="stamps/b_1.gif"></img><img src="stamps/b_2.gif"></img></p>
-      <p><img src="stamps/b_5.png"></img><img src="stamps/b_7.png"></img></p>
-    </div>
-    </div>
-      <label for="terminal">Enter a command</label>
-      <div class="old-screen">
-        <span>>_</span>
-        <textarea id="terminal" class="terminal-input" spellcheck="false" autofocus="true" maxlength="30" cols="40" rows="1"></textarea>
-      </div>
+<div class="grid-layout">
+    <header class="header">
+      <div class="ascii-art">
+  __   __    __    ____   __   _  _  ____  ____  ____   __   __ _  ____  __   ____  ____ 
+ / _\ (  )  (  )  (    \ / _\ ( \/ )(  _ \(  _ \(  __) / _\ (  / )(  __)/ _\ / ___)(_  _)
+/    \/ (_/\/ (_/\ ) D (/    \ )  /  ) _ ( )   / ) _) /    \ )  (  ) _)/    \\___ \  )(  
+\_/\_/\____/\____/(____/\_/\_/(__/  (____/(__\_)(____)\_/\_/(__\_)(__) \_/\_/(____/ (__)
 
-    </br>
 
-      <div class="typewriter">
-        <textarea id="resp" class="response-read" readonly="true" cols="80" rows="2">Welcome! Try typing a command above.</textarea>
-      </div>
-
-      <div class="content">
-        <iframe id='cont' src="pages/empty.html" width="800" height="600" frameBorder="0"></iframe>
       </div>
       
+      <div class="buttons">
+        <p><img src="stamps/b_6.gif"></img><img src="stamps/b_1.gif"></img><img src="stamps/b_2.gif"></img></p>
+        <p><img src="stamps/b_5.png"></img><img src="stamps/b_7.png"></img></p>
+      </div>
+
+    </header>
+    
+    <main class="main-content">
+      <div class="main">
+            <label for="terminal">Enter a command</label>
+            <div class="old-screen">
+              <span>>_</span>
+              <textarea id="terminal" class="terminal-input" spellcheck="false" autofocus="true" maxlength="30" cols="40" rows="1"></textarea>
+            </div>
+
+            </br>
+
+              <div class="typewriter">
+                <textarea id="resp" class="response-read" readonly="true" cols="60" rows="2">Welcome! Try typing a command above.</textarea>
+              </div>
+
+              <div class="content">
+                <iframe id='cont' src="pages/empty.html" frameBorder="0"></iframe>
+              </div>
+
+          </div>
+    </main>
+
+    <section class="left-sidebar">
+      <div class="main">
+        <p>current status......</p>
+        <div id="statuscafe">
+          <div id="statuscafe-username"></div>
+            <div id="statuscafe-content"></div>
+          </div>
+          <script src="https://status.cafe/current-status.js?name=alldaybreakfast" defer>
+          </script>
+          </div>
+    </section>
+
+    <aside class="right-sidebar">
+      <div class ="main">This sidebar is under construction...</div>
+    </aside>
+
+    <footer class="footer"></footer>
+
+</div>
   </body>
   <script type="module" src="./js/event_listener.js"></script>
 </html>

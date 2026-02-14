@@ -1,14 +1,94 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
-   HTML content. To learn how to do something, just try searching Google for questions like
-   "how to change link color." */
-
 body {
   background-color: rgb(0, 0, 0);
   color: rgb(202, 35, 35);
   font-family: 'Lucida Console';
   text-shadow: 0 0 5px #ff0000;
   letter-spacing: 2.5px;
-    font-size: small;
+  font-size: small;
+}
+
+.grid-layout {
+    display:grid;
+    grid-template-areas:
+        'header'
+        'main-content'
+        'left-sidebar'
+        'right-sidebar'
+        'footer';
+}
+
+.grid-layout > * {
+    padding:2.0rem;
+}
+
+.grid-layout > .header {
+    grid-area: header;
+    align-items: center;
+    text-align: center;
+}
+
+.grid-layout > .main-content {
+    grid-area: main-content;
+}
+
+.grid-layout > .left-sidebar {
+    grid-area: left-sidebar;
+}
+
+.grid-layout > .right-sidebar {
+    grid-area: right-sidebar;
+}
+
+.grid-layout > .footer {
+    grid-area: footer;
+}
+
+@media (min-width:768px) {
+    .grid-layout {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            'header header'
+            'main-content main-content'
+            'left-sidebar right-sidebar'
+            'footer footer';
+    }
+}
+
+@media (min-width:1024px) {
+    .grid-layout {
+grid-template-columns: 310px 1fr 1fr 310px;
+        grid-template-areas:
+            'header header header header'
+            'left-sidebar main-content main-content right-sidebar'
+            'footer footer footer footer';
+    }
+}
+
+.main{
+  display: block;
+  text-align: left;
+  align-items: start;
+  border-width: 2px;
+  border-style: double;
+  border-color: #e00000;
+}
+
+#statuscafe {
+    padding: .5em;
+    border: 1px solid;
+}
+
+#statuscafe-username {
+    margin-bottom: .5em;
+}
+
+#statuscafe-content {
+    margin: 0 1em 0.5em 1em;
+}
+
+iframe{
+  width:100%;
+  height: 500px;
 }
 
 .terminal-input {
@@ -21,23 +101,22 @@ body {
   border: none;
   outline: none;
 }
+
 .ascii-art {
-    font-family: monospace;
-    white-space: pre;
+  font-family: monospace;
+  white-space: pre;
+  font-size: 1vw;
 }
+
 .about{
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
   align-items: center;
 }
-.buttons{
-  width: 27%;
-  align-items: center;
-  text-align: center;
-}
+
 .response-read {
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
   color:rgb(202, 35, 35);
   text-shadow: 0 0 5px #ff0000;
   letter-spacing: 2.5px;
@@ -52,7 +131,7 @@ body {
   margin: 0 auto;
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
-    typing 3.5s steps(40, end),
+    typing 1.5s steps(40, end),
     blink-caret .75s step-end infinite;
 }
 
