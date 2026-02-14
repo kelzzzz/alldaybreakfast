@@ -6,6 +6,7 @@ export const COMMANDS = {
   unrecognized: "Sorry, I don't know that command. Try 'help' for instructions!",
   'dir':'pages/under_construction.html',
   'writing':'pages/under_construction.html',
+  'apples':'pages/apples.html'
 };
 
 export const MESSAGES = ["Here you go...", "Fetching...", "Got it..."];
