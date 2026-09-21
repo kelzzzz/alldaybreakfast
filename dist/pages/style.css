@@ -18,7 +18,7 @@ body {
 }
 
 .grid-layout > * {
-    padding:2.0rem;
+    padding:1.0rem;
 }
 
 .grid-layout > .header {

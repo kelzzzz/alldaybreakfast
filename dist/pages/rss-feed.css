@@ -33,3 +33,7 @@ body img {
   max-width: 64px !important;
   object-fit: cover;
 }
+
+body table tr:not(:last-child) td {
+  border-bottom: 1px dotted #fff !important;
+}
