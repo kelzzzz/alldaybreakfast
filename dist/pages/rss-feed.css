@@ -1,0 +1,35 @@
+html,
+body {
+  width: 100%;
+  max-width: 400px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  background: #000 !important;
+  color: #f00000 !important;
+  font-family: 'Lucida Console', monospace;
+  font-size: 12px;
+}
+
+body,
+body table,
+body tr,
+body td,
+body div {
+  background-color: #000 !important;
+  color: #f00000 !important;
+}
+
+body a,
+body a:visited,
+body a:hover {
+  color: #f00000 !important;
+}
+
+body img {
+  width: 64px !important;
+  height: 64px !important;
+  max-width: 64px !important;
+  object-fit: cover;
+}
